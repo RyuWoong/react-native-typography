@@ -1,9 +1,13 @@
 {
   "name": "@ryuwoong/react-native-typography",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "test",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RyuWoong/react-native-typography.git"
+  },
   "scripts": {
     "lint": "eslint --ext .tsx --ext .ts src/",
     "format": "prettier --check ./src",
