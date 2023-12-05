@@ -1,0 +1,49 @@
+{
+  "name": "@ryuwoong/react-native-typography",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "eslint --ext .tsx --ext .ts src/",
+    "format": "prettier --check ./src",
+    "start": "rm -rf Develop/dist && tsc -w --outDir Develop/dist",
+    "start:expo": "rm -rf DevelopWithExpo/dist && tsc -w --outDir DevelopWithExpo/dist",
+    "prepare": "rm -rf dist && tsc"
+  },
+  "author": "RyuWoong",
+  "license": "ISC",
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --ext .tsx --ext .ts src/ --fix"
+    ],
+    "./src/**": [
+      "prettier --write ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@types/react": "*",
+    "@types/react-native": "*",
+    "@typescript-eslint/eslint-plugin": "6.13.2",
+    "@typescript-eslint/parser": "6.13.2",
+    "eslint": "8.55.0",
+    "eslint-plugin-prettier": "5.0.1",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "8.0.3",
+    "lint-staged": "15.2.0",
+    "prettier": "3.1.0",
+    "react": "*",
+    "react-native": "*",
+    "typescript": "4.8.4"
+  }
+}
